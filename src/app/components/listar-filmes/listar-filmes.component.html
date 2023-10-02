@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <h2 class="fs-1 text-warning">Meus Favoritos</h2>
+  <div class="row g-3">
+    <div class="col-6 col-md-4 col-lg-2 text-center" *ngFor="let filme of filmesFavoritos">
+      <div class="d-grid gap-2">
+        <img routerLink="/detalhes-filmes/{{ filme.id }}" src="{{ filme.urlPoster }}" alt="{{ filme.titulo }}" class="img-fluid rounded-3">
+        <a routerLink="/detalhes-filmes/{{ filme.id }}" class="fs-5 link-warning text-decoration-none">{{ filme.titulo }}</a>
+      </div>
+    </div>
+  </div>
+</div>
